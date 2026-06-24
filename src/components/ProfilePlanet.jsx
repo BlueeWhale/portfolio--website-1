@@ -1,10 +1,10 @@
 import { useLoader } from "@react-three/fiber";
 import * as THREE from "three";
-
+import cseImg from "../assets/cse.png";
 function ProfilePlanet() {
   const texture = useLoader(
     THREE.TextureLoader,
-    "src/assets/cse.png"
+    cseImg
   );
 
   return (
