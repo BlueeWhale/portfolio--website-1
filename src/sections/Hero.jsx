@@ -39,14 +39,14 @@ function Hero() {
       <SkillPlanet
   radius={5}
   speed={1}
-  texturePath="src/assets/react.png"
+  texturePath="/assets/react.png"
   name="React"
 />
 
 <SkillPlanet
   radius={7}
   speed={0.7}
-  texturePath="src/assets/python.png"
+  texturePath="/assets/python.png"
   name="Python"
 />
 
@@ -54,7 +54,7 @@ function Hero() {
 <SkillPlanet
   radius={9}
   speed={0.5}
-  texturePath="src/assets/java.png"
+  texturePath="/assets/java.png"
   name="Java"
 />
 
@@ -62,7 +62,7 @@ function Hero() {
 <SkillPlanet
   radius={11}
   speed={0.3}
-  texturePath="src/assets/SQL.png"
+  texturePath="/assets/SQL.png"
   name="SQL"
 />
 
@@ -70,21 +70,21 @@ function Hero() {
         <SkillPlanet
   radius={10}
   speed={0.6}
-  texturePath="src/assets/C++.png"
+  texturePath="/assets/C++.png"
   name="C++"
 />
       {/* Ruby */}
       <SkillPlanet
   radius={5}
   speed={0.9}
-  texturePath="src/assets/ruby.png"
+  texturePath="/assets/ruby.png"
   name="Ruby"
 />
       {/* vite */}
       <SkillPlanet
   radius={12}
   speed={0.1}
-  texturePath="src/assets/vite.png"
+  texturePath="/assets/vite.png"
   name="viteReact"
 />
 
@@ -92,7 +92,7 @@ function Hero() {
     <SkillPlanet
   radius={4}
   speed={0.7}
-  texturePath="src/assets/node.png"
+  texturePath="/assets/node.png"
   name="NodeJS"
 />
 
@@ -100,7 +100,7 @@ function Hero() {
     <SkillPlanet
   radius={13}
   speed={1.1}
-  texturePath="src/assets/js.png"
+  texturePath="/assets/js.png"
   name="JavaScript"
 />
 
