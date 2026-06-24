@@ -4,6 +4,17 @@ import SkillPlanet from "../components/SkillPlanet";
 import ProfilePlanet from "../components/ProfilePlanet";
 import OrbitingPlanet from "../components/OrbitingPlanet";
 
+import reactImg from "../assets/react.png";
+import pythonImg from "../assets/python.png";
+import javaImg from "../assets/java.png";
+import sqlImg from "../assets/SQL.png";
+import cppImg from "../assets/C++.png";
+import rubyImg from "../assets/ruby.png";
+import viteImg from "../assets/vite.png";
+import nodeImg from "../assets/node.png";
+import jsImg from "../assets/js.png";
+
+
 function Hero() {
   return (
     <section className="hero">
@@ -39,14 +50,14 @@ function Hero() {
       <SkillPlanet
   radius={5}
   speed={1}
-  texturePath="/assets/react.png"
+  texturePath={reactImg}
   name="React"
 />
 
 <SkillPlanet
   radius={7}
   speed={0.7}
-  texturePath="/assets/python.png"
+  texturePath={pythonImg}
   name="Python"
 />
 
@@ -54,7 +65,7 @@ function Hero() {
 <SkillPlanet
   radius={9}
   speed={0.5}
-  texturePath="/assets/java.png"
+  texturePath={javaImg}
   name="Java"
 />
 
@@ -62,7 +73,7 @@ function Hero() {
 <SkillPlanet
   radius={11}
   speed={0.3}
-  texturePath="/assets/SQL.png"
+  texturePath={sqlImg}
   name="SQL"
 />
 
@@ -70,21 +81,21 @@ function Hero() {
         <SkillPlanet
   radius={10}
   speed={0.6}
-  texturePath="/assets/C++.png"
+  texturePath={cppImg}
   name="C++"
 />
       {/* Ruby */}
       <SkillPlanet
   radius={5}
   speed={0.9}
-  texturePath="/assets/ruby.png"
+  texturePath={rubyImg}
   name="Ruby"
 />
       {/* vite */}
       <SkillPlanet
   radius={12}
   speed={0.1}
-  texturePath="/assets/vite.png"
+  texturePath={viteImg}
   name="viteReact"
 />
 
@@ -92,7 +103,7 @@ function Hero() {
     <SkillPlanet
   radius={4}
   speed={0.7}
-  texturePath="/assets/node.png"
+  texturePath={nodeImg}
   name="NodeJS"
 />
 
@@ -100,7 +111,7 @@ function Hero() {
     <SkillPlanet
   radius={13}
   speed={1.1}
-  texturePath="/assets/js.png"
+  texturePath={jsImg}
   name="JavaScript"
 />
 
