@@ -1,21 +1,32 @@
 import { useState } from "react";
+import Cursor from "./components/Cursor";
 import Navbar from "./components/Navbar";
-import Hero from "./sections/Hero";
 import Intro from "./components/Intro";
+import BootScreen from "./components/BootScreen";
+
+import Hero from "./sections/Hero";
 import About from "./sections/About";
+import Education from "./sections/Education";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
-import Footer from "./components/Footer";
+
 import ResumeButton from "./components/ResumeButton";
-import MusicToggle from "./components/MusicToggle";
 import FloatingDock from "./components/FloatingDock";
-import Education from "./sections/Education";
+import MusicToggle from "./components/MusicToggle";
+import Footer from "./components/Footer";
 
 function App() {
+  // Intro Screen
   const [showIntro, setShowIntro] = useState(true);
 
-  // Theme State
+  // Boot Screen
+  const [showBoot, setShowBoot] = useState(false);
+
+  // Music
+  const [musicStart, setMusicStart] = useState(false);
+
+  // Theme
   const [theme, setTheme] = useState("dark");
 
   const toggleTheme = () => {
@@ -23,61 +34,74 @@ function App() {
       prev === "dark" ? "light" : "dark"
     );
   };
-  const [musicStart, setMusicStart] =
-  useState(false);
 
+  // Intro First
   if (showIntro) {
     return (
       <Intro
-  onComplete={() => {
-    setShowIntro(false);
-    setMusicStart(true);
-  }}
-/>
-
+        onComplete={() => {
+          setShowIntro(false);
+          setShowBoot(true);
+        }}
+      />
     );
   }
-<MusicToggle autoStart={musicStart} />
+
+  // Boot Screen Second
+  if (showBoot) {
+    return (
+      <BootScreen
+        onComplete={() => {
+          setShowBoot(false);
+          setMusicStart(true);
+        }}
+      />
+    );
+  }
+
+  // Main Portfolio
   return (
     <div className={theme}>
       <Navbar
         theme={theme}
         toggleTheme={toggleTheme}
       />
-    
+
       <section id="home">
         <Hero />
       </section>
 
       <section id="about">
-  <About />
-</section>
+        <About />
+      </section>
 
-<section id="education">
-  <Education />
-</section>
+      <section id="education">
+        <Education />
+      </section>
 
-<section id="skills">
-  <Skills />
-</section>
+      <section id="skills">
+        <Skills />
+      </section>
 
-<section id="projects">
-  <Projects />
-</section>
+      <section id="projects">
+        <Projects />
+      </section>
 
-<section id="resume">
-  <ResumeButton />
-</section>
+      <section id="resume">
+        <ResumeButton />
+      </section>
 
-<section id="contact">
-  <Contact />
-</section>
+      <section id="contact">
+        <Contact />
+      </section>
 
+      <FloatingDock />
 
+      <Cursor />
 
-<FloatingDock />
-<MusicToggle />
-<Footer />
+      <MusicToggle autoStart={musicStart} />
+
+      <Footer />
     </div>
   );
 }
