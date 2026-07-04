@@ -1,3 +1,4 @@
+import React from "react";
 import {
   FaReact,
   FaPython,
@@ -18,66 +19,90 @@ import {
   SiRuby,
   SiMongodb,
   SiExpress,
-  SiBootstrap,
-  SiVite,
   SiC,
   SiCplusplus,
 } from "react-icons/si";
 
-import {
-   VscVscode
-} from "react-icons/vsc"
+import { VscVscode } from "react-icons/vsc";
+import { GiArtificialIntelligence } from "react-icons/gi";
 
-import {
-  GiArtificialIntelligence
-} from "react-icons/gi"
+// Grouping skills into structured categories for better UI layout and organization
+const SKILL_CATEGORIES = [
+  {
+    categoryName: "Programming Languages",
+    skills: [
+      { name: "Python", icon: <FaPython />, level: "Advanced" },
+      { name: "Java", icon: <FaJava />, level: "Intermediate" },
+      { name: "JavaScript", icon: <FaJs />, level: "Advanced" },
+      { name: "C", icon: <SiC />, level: "Core" },
+      { name: "C++", icon: <SiCplusplus />, level: "DSA" },
+      { name: "Ruby", icon: <SiRuby />, level: "Basics" },
+    ],
+  },
+  {
+    categoryName: "Frontend Development",
+    skills: [
+      { name: "React", icon: <FaReact />, level: "Advanced" },
+      { name: "AngularJS", icon: <FaAngular />, level: "Basic" },
+      { name: "HTML5", icon: <FaHtml5 />, level: "Expert" },
+      { name: "CSS3", icon: <FaCss3Alt />, level: "Expert" },
+    ],
+  },
+  {
+    categoryName: "Backend & Databases",
+    skills: [
+      { name: "NodeJS", icon: <FaNodeJs />, level: "Intermediate" },
+      { name: "ExpressJS", icon: <SiExpress />, level: "Intermediate" },
+      { name: "DBMS", icon: <FaDatabase />, level: "Core" },
+      { name: "SQL / MySQL", icon: <SiMysql />, level: "Queries" },
+      { name: "MongoDB", icon: <SiMongodb />, level: "NoSQL" },
+    ],
+  },
+  {
+    categoryName: "AI & Development Tools",
+    skills: [
+      { name: "Machine Learning", icon: <GiArtificialIntelligence />, level: "Enthusiast" },
+      { name: "Computer Vision", icon: <SiOpencv />, level: "OpenCV" },
+      { name: "VS Code", icon: <VscVscode />, level: "IDE" },
+      { name: "PyCharm", icon: <SiPycharm />, level: "IDE" },
+    ],
+  },
+];
 
 function Skills() {
-  const skills = [
-    { name: "React", icon: <FaReact /> },
-    { name: "Python", icon: <FaPython /> },
-    { name: "Java", icon: <FaJava /> },
-    { name: "JavaScript", icon: <FaJs /> },
-    { name: "HTML", icon: <FaHtml5 /> },
-    { name: "CSS", icon: <FaCss3Alt /> },
-    { name: "DBMS", icon: <FaDatabase /> },
-    { name: "SQL", icon: <SiMysql/>},
-    { name: "Mongodb", icon: <SiMongodb/>},
-    { name: "NodeJS", icon: <FaNodeJs/>},
-    { name: "ExpressJS", icon: <SiExpress/>},
-    { name: "AngularJS", icon: <FaAngular/>},
-    { name: "ComputerVision", icon: <SiOpencv/>},
-    { name: "Visual Studio Code", icon: <VscVscode/>},
-    { name: "PyCharm", icon: <SiPycharm/>},
-    { name: "Ruby", icon: <SiRuby/>},
-    { name: "C", icon: <SiC/>},
-    { name: "C++", icon: <SiCplusplus/>},
-    { name: "Machine Learning", icon: <GiArtificialIntelligence/>},
-   
-  ];
-
   return (
     <section className="skills-section">
+      {/* Title with your portfolio's cosmic theme */}
+      <div className="skills-header">
+        <h1 className="skills-title">🌌 Skills Galaxy</h1>
+        <p className="skills-subtitle">Mapping my technical expertise across the development universe</p>
+      </div>
 
-      <h1 className="skills-title">
-        🌌 Skills Galaxy
-      </h1>
-
-      <div className="skills-grid">
-        {skills.map((skill) => (
-          <div
-            key={skill.name}
-            className="skill-card"
-          >
-            <div className="skill-icon">
-              {skill.icon}
+      {/* Mapping through each distinct technical category */}
+      <div className="categories-container">
+        {SKILL_CATEGORIES.map((cat, catIdx) => (
+          <div key={catIdx} className="skill-category-block">
+            <h2 className="category-title">{cat.categoryName}</h2>
+            
+            {/* Grid structure specifically optimized for the current cluster */}
+            <div className="skills-grid">
+              {cat.skills.map((skill) => (
+                <div key={skill.name} className="skill-card">
+                  <div className="skill-icon-wrapper">
+                    <span className="skill-icon">{skill.icon}</span>
+                  </div>
+                  
+                  <div className="skill-info">
+                    <h3>{skill.name}</h3>
+                    {/* Unique feature: Subtext badge displaying focus/proficiency area */}
+                    <span className="skill-level-badge">{skill.level}</span>
+                  </div>
+                </div>
+              ))}
             </div>
-
-            <h3>{skill.name}</h3>
           </div>
         ))}
       </div>
-
     </section>
   );
 }

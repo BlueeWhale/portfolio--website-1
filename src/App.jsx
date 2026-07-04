@@ -14,6 +14,7 @@ import Contact from "./sections/Contact";
 import ResumeButton from "./components/ResumeButton";
 import FloatingDock from "./components/FloatingDock";
 import MusicToggle from "./components/MusicToggle";
+import TechMarquee from "./components/TechMarquee";
 import Footer from "./components/Footer";
 
 function App() {
@@ -90,6 +91,8 @@ function App() {
       <section id="resume">
         <ResumeButton />
       </section>
+
+      <TechMarquee />
 
       <section id="contact">
         <Contact />
