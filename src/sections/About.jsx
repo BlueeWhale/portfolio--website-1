@@ -8,7 +8,7 @@ import profile5 from "../assets/profile5.jpeg";
 import profile6 from "../assets/profile6.jpeg";
 import profile7 from "../assets/profile7.jpeg";
 
-// 1. static array को बाहर रखने से परफॉर्मेंस बेहतर होती है
+
 const IMAGES = [profile1, profile2, profile3, profile4, profile5, profile6, profile7];
 
 function About() {
