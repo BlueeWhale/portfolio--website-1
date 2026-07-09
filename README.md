@@ -38,3 +38,4 @@ The portfolio is designed like a **solar system**, where each planet represents 
 - CSS3 🎯
 
 ---
+we have changed the the aside on the portfolio pls check it tell me in comments...............................................
