@@ -8,7 +8,6 @@ import profile5 from "../assets/profile5.jpeg";
 import profile6 from "../assets/profile6.jpeg";
 import profile7 from "../assets/profile7.jpeg";
 
-
 const IMAGES = [profile1, profile2, profile3, profile4, profile5, profile6, profile7];
 
 function About() {
@@ -26,45 +25,61 @@ function About() {
     <section className="about-section">
       <div className="astronaut-card">
         
+        {/* Left Side: Image with Cyber Premium Layer */}
         <div className="about-left">
-          <img
-            src={IMAGES[currentImage]}
-            alt="Rishabh Kumar"
-            className="about-image"
-          />
+          <div className="image-cyber-wrapper">
+            <div className="cyber-ring-glow"></div>
+            <img
+              src={IMAGES[currentImage]}
+              alt="Rishabh Kumar"
+              className="about-image"
+            />
+          </div>
         </div>
 
+        {/* Right Side: Structured Intel Sections */}
         <div className="about-right">
-          <h1>👨‍🚀 About Me</h1>
+          <h1 className="section-title">👨‍🚀 About Me</h1>
+          <h3 className="profile-tagline">Full Stack Developer & AI Specialist</h3>
 
-          <h3>Full Stack Developer and AI Enthusiast</h3>
+          <div className="intel-grid">
+            <div className="intel-block">
+              <h4> Who I Am</h4>
+              <p>
+                Rishabh Kumar — a Computer Science Engineering student obsessed with software architecture, intelligent automations, and building high-performance systems.
+              </p>
+            </div>
 
-          <p>
-            Hi, I'm Rishabh Kumar, a passionate B.Tech student and aspiring Software Developer with a strong interest in Python, Web Development, Artificial Intelligence, and DSA. I enjoy transforming creative ideas into interactive digital experiences, from building AI-powered applications and Python games to developing modern, responsive websites.
-          </p>
-          
-          <p>
-            My journey in programming started with curiosity and has evolved into a continuous pursuit of learning and innovation. I have worked on various personal and academic projects. Through these projects, I have developed problem-solving skills, logical thinking, and a deep understanding of software development principles.
-          </p>
+            <div className="intel-block">
+              <h4> What I Am Doing</h4>
+              <p>
+                Developing AI-driven security layers (threat vectors), deploying full-stack ecosystems, optimizing algorithms, and exploring 3D interactive canvases like React Three Fiber.
+              </p>
+            </div>
 
-          <p>
-            I am always eager to explore new technologies, improve my skills, and take on challenging projects that help me grow as a developer. My goal is to create impactful solutions that combine creativity, performance, and user experience while continuously learning and contributing to the tech community.
-          </p>
+            <div className="intel-block">
+              <h4> My Cosmic Goal</h4>
+              <p>
+                To engineer seamless cyber-infrastructures where advanced neural architectures merge flawlessly with scalable web ecosystems to produce next-gen digital paradigms.
+              </p>
+            </div>
+          </div>
 
+          {/* Stats Counters */}
           <div className="about-stats">
             <div className="stat-box">
-              <h2>10+</h2>
-              <span>Projects</span>
+              <h2>15+</h2>
+              <span>Projects Completed</span>
             </div>
 
             <div className="stat-box">
-              <h2>5+</h2>
-              <span>Technologies</span>
+              <h2>10+</h2>
+              <span>Core Tech Vector Stack</span>
             </div>
 
             <div className="stat-box">
               <h2>100%</h2>
-              <span>Passion</span>
+              <span>Emissive Engine Passion</span>
             </div>
           </div>
         </div>

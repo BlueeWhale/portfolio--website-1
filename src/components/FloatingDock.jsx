@@ -1,7 +1,7 @@
 import {
   FaWhatsapp,
   FaEnvelope,
- 
+  FaFileDownload,
 } from "react-icons/fa";
 
 function FloatingDock() {
@@ -10,7 +10,7 @@ function FloatingDock() {
 
       <a
         href="mailto:rishabgoyal345@gmail.com"
-        className="dock-btn email-btn"
+        className="dock-btn dock-email"
       >
         <FaEnvelope />
       </a>
@@ -18,16 +18,16 @@ function FloatingDock() {
       <a
         href="/rishi_resume.pdf"
         download
-        className="dock-btn resume-btn"
+        className="dock-btn dock-resume"
       >
-       📄
+        <FaFileDownload />
       </a>
 
       <a
         href="https://wa.me/919625702007"
         target="_blank"
         rel="noreferrer"
-        className="dock-btn whatsapp-btn"
+        className="dock-btn dock-whatsapp"
       >
         <FaWhatsapp />
       </a>
