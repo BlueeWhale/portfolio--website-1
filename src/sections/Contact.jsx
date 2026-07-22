@@ -98,7 +98,8 @@ ${message}
     <a
         href="https://github.com/BlueeWhale"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
     >
         <FaGithub />
     </a>
@@ -106,7 +107,8 @@ ${message}
     <a
         href="https://www.linkedin.com/in/rishabh-kumar-96979a37b/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
     >
         <FaLinkedin />
     </a>
@@ -114,7 +116,8 @@ ${message}
     <a
         href="https://www.instagram.com/rishi_goyal0411?igsh=MTZta3M4ZGNrYTdqcg=="
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
     >
         <FaInstagram />
     </a>
@@ -122,7 +125,8 @@ ${message}
     <a
         href="https://t.me/YOUR_USERNAME"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
+        aria-label="Telegram"
     >
         <FaTelegram />
     </a>
