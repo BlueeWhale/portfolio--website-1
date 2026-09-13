@@ -36,7 +36,7 @@ function Education() {
 
           <p>
             Completed Higher Secondary
-            Education with Science Stream.
+            Educatio    n with Science Stream.
 
              
           </p>

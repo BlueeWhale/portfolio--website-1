@@ -33,6 +33,17 @@ function Projects() {
 
   const projects = [
     {
+      title: "Ecosphere Hackathon",
+      desc: "EchoSphere Hackathon 2026 was a competitive innovation and technology hackathon focused on building practical, AI-powered solutions to real-world problems.",
+      image: "https://json.commudle.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeU9aQnc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ffa5d885e1dd1508237b60ee44bc064908074abe/com_01e96d8ae3aca14a_20260810182148.jpeg",
+      techIcons: [<SiReact key="rc" />,
+      <FaNodeJs key="nj"/>
+      ],
+      github: "https://github.com/BlueeWhale/Ecosphere-hackathon.git",
+      demo: "https://dealpilot-frontend.onrender.com",
+      video: null,
+    },
+    {
       title: "Vision Desk",
       desc: "AI + Computer Vision based smart desktop system using hand gestures and automation.",
       image: vision,
